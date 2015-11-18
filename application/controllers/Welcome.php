@@ -20,7 +20,22 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view("templates/header", array(
+				"title" => ""
+			) );
+		$this->load->view('home/inicio');
+
+		$this->load->view("templates/footer");
+	}
+
+	public function video()
+	{
+		$this->load->view("templates/header", array(
+				"title" => "Videos Relacionados"
+			) );
+		$this->load->view('home/video');
+
+		$this->load->view("templates/footer");
 	}
 
 }

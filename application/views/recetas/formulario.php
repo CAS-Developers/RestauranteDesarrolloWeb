@@ -9,7 +9,7 @@
         <label for="nombre"><br>Nombre</label>
         <?php  echo form_input('nombre', $rec->nombre, "class='form-control' placeholder='Nombre'");  ?>
         <label for="indicaciones"><br>Indicaciones</label>
-        <?php echo form_TextArea('indicaciones', $rec->indicaciones, "class='form-control' placeholder='Nombre'");?>
+        <?php echo form_TextArea('indicaciones', $rec->indicaciones, "class='form-control' placeholder='Ejemplo: Esta receta contiene...'");?>
         <label for="nombre"> <br> Cocinero </label>
         <?php  echo form_dropdown('id_cocinero', $cocineros, "---", "class='form-dropdown'" );  ?>
         <?php echo form_hidden('id', $rec->id); ?>

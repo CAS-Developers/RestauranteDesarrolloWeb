@@ -4,11 +4,11 @@
       echo form_open("crudcocineros/guardar");
       ?>
       <form class="form-control">
-        <label for="nombre">Nombre </label> 
+        <label for="nombre"><br>Nombre </label>
         <?php  echo form_input('nombre', $coc->nombre, "class='form-control' placeholder='Nombre'");  ?>
-        <label for="empresa">Empresa</label> <br>
+        <label for="empresa"><br>Empresa</label> <br>
         <?php echo form_input('empresa', $coc->empresa, "class='form-control' placeholder='Escriba su lugar de trabajo'");?>
-        <label for="pais">Pais de nacimiento</label>
+        <label for="pais"><br>Pais de nacimiento</label>
         <?php echo form_input('pais', $coc->pais, "class='form-control' placeholder='Ejemplo: Colombia'");?>
         <?php echo form_hidden('id', $coc->id); ?>
         <br>

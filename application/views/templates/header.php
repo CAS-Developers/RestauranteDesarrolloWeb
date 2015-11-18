@@ -1,6 +1,6 @@
 <html>
 <head>
-		<title ><?php echo $title; ?> - Restaurante</title>
+		<title ><?php echo $title; ?>La Langosta Azul</title>
 
 		<link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css');?>">
 		<link rel="stylesheet" href="<?php echo base_url('css/bootstrap-theme.min.css');?>">
@@ -13,6 +13,12 @@
 			.navbar {
 				margin-bottom: 5px;
 			}
+
+			#cuerpo1{
+	  				width: 790px;
+	  				margin-left: 208px;
+	  				padding: 12px 0px 10px 0px;
+				}
 
 		#pie{
 			clear: both;
@@ -32,11 +38,11 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Restaurante</a>
+					<a class="navbar-brand" href="#">La langosta Azul</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li ><a href="#">Inicio</a></li>
+						<li ><a href="<?php echo base_url('index.php/welcome');?>">Inicio</a></li>
 						<li><a class="dropdown-toggle" data-toggle="dropdown" role="button"
 										aria-haspopup="true" aria-expanded="false">Cocineros<span class="caret"></span></a>
 											<ul class="dropdown-menu">
@@ -58,7 +64,7 @@
 														<li><a href="<?php echo base_url('index.php/crudclientes/crear');?>">Agregar cliente</a></li>
 												</ul>
 						</li>
-						<li><a href="<?php echo base_url('index.php/crudclientes');?>">Videos</a></li>
+						<li><a href="<?php echo base_url('index.php/welcome/video');?>">Videos</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
 			<!--</div>/.container-fluid -->

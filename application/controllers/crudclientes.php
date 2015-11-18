@@ -42,7 +42,6 @@ class Crudclientes extends CI_Controller {
 				"title" => "Crear Cliente", "recetas"=> $recetas
 			) );
 
-
      	$cliente = new stdClass();
 
         $cliente->nombre = "";
@@ -55,8 +54,8 @@ class Crudclientes extends CI_Controller {
             );
 
         $this->load->view('clientes/formulario',$datos);
+				$this->load->view("templates/footer");
 
-        $this->load->view("templates/footer");
     }
 
     public function editar($id)
