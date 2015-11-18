@@ -8,7 +8,7 @@
         }
 
     ?>
-<table class="table table-hover">
+<table class="table table-hover"><br>
   <tr>
     <td>Nombre</td>
     <td>Empresa</td>

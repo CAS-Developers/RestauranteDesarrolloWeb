@@ -8,9 +8,6 @@
         }
 
     ?>
-<div class="">
-  <a class="btn btn-success" href="<?php echo base_url(); ?>index.php/crudclientes/crear" role="button" >Crear Cliente</a>
-</div>
 	<br><table class="table table-hover">
 		<tr>
 			<td>Nombre</td>
