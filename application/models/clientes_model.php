@@ -4,7 +4,7 @@ class clientes_model extends CI_Model {
 
   public function listar(){
 
-    $this->db->select("id, nombre, direccion, telefono");
+    $this->db->select("id, nombre, direccion, telefono, id_receta");
     $this->db->order_by("nombre ASC");
     $this->db->from("clientes");
     $retorno = $this->db->get();
@@ -15,7 +15,7 @@ class clientes_model extends CI_Model {
 
   public function cargar($id){
 
-		$this->db->select("id, nombre, direccion, telefono");
+		$this->db->select("id, nombre, direccion, telefono, id_receta");
 		$this->db->from("clientes");
 		$this->db->where("id",$id);
 		$retorno = $this->db->get();
@@ -24,7 +24,7 @@ class clientes_model extends CI_Model {
 
 	}
 
-  public function guardar($nombre, $direccion, $telefono){
+  public function guardar($nombre, $direccion, $telefono, $id_receta){
 
 		$this->db->select("count(*) as cantidad");
 		$this->db->from("clientes");
@@ -39,7 +39,8 @@ class clientes_model extends CI_Model {
 			$this->db->insert("clientes",array(
 				"nombre"=>$nombre,
 				"direccion"=>$direccion,
-        "telefono"=>$telefono
+        "telefono"=>$telefono,
+        "id_receta"=>$id_receta
 				));
 
 			return true;
@@ -50,7 +51,7 @@ class clientes_model extends CI_Model {
 
 	}
 
-	public function actualizar($id, $nombre, $direccion, $telefono){
+	public function actualizar($id, $nombre, $direccion, $telefono, $id_receta){
 
 		$this->db->select("count(*) as cantidad");
 		$this->db->from("clientes");
@@ -67,7 +68,8 @@ class clientes_model extends CI_Model {
 			$this->db->update("clientes", array(
 				"nombre"=>$nombre,
 				"direccion"=>$direccion,
-        "telefono"=>$telefono
+        "telefono"=>$telefono,
+        "id_receta"=>$id_receta
 				));
 
 			return true;

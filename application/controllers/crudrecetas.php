@@ -64,8 +64,9 @@ class Crudrecetas extends CI_Controller{
         if ($id==0){
             show_404();
         }else{
-
+            $cocineros = $this->recorrer($this->cocineros_model->listar(),"nombre");
             $datos["rec"]= $this->recetas_model->cargar($id);
+            $datos["cocineros"]= $cocineros;
 
             $this->load->view("templates/header", array(
 				"title" => "Editar Receta"

@@ -8,23 +8,25 @@
         }
 
     ?>
-
-<a class="btn btn-success" href="<?php echo base_url(); ?>index.php/crudclientes/crear" role="button">Crear Cliente</a>
-
-	<table class="table table-hover">
+<div class="">
+  <a class="btn btn-success" href="<?php echo base_url(); ?>index.php/crudclientes/crear" role="button" >Crear Cliente</a>
+</div>
+	<br><table class="table table-hover">
 		<tr>
 			<td>Nombre</td>
-			<td>Usuario</td>
-			<td>Password</td>
+			<td>Direccion</td>
+			<td>Telefono</td>
+      <td>Receta Favorita</td>
 			<td>Editar</td>
 		</tr>
 		<?php foreach($clientes as $fila){ ?>
 		<tr>
         <td><?php echo $fila["nombre"]; ?></td>
-        <td><?php echo $fila["usuario"]; ?></td>
-        <td><?php echo "---"; ?></td>
-        <td><?php echo anchor("crudusuarios/editar/".$fila["id"], 'Editar', 'title="Editar Usuario"'); ?></td>
-        <td><?php echo anchor("crudusuarios/eliminar/".$fila["id"], 'Eliminar'); ?></td>
+        <td><?php echo $fila["direccion"]; ?></td>
+        <td><?php echo $fila["telefono"]; ?></td>
+        <td><?php echo $recetas[$fila["id_receta"]];?></td>
+        <td><?php echo anchor("crudclientes/editar/".$fila["id"], 'Editar', 'title="Editar Cliente"'); ?></td>
+        <td><?php echo anchor("crudclientes/eliminar/".$fila["id"], 'Eliminar'); ?></td>
     </tr>
     <?php } ?>
     </table>

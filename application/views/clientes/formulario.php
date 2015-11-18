@@ -1,38 +1,23 @@
-<?php
+<div class="col-md-6">
+  <?php
 
-    echo form_open("crudclientes/guardar");
-    ?>
-    <table>
-    <tr>
-        <td>Nombre</td>
-        <td>
-            <?php
-                echo form_input('nombre', $cli->nombre);
-            ?>
-        </td>
-    </tr>
-    <tr>
-        <td>Usuario</td>
-        <td>
-            <?php
-                echo form_input('direccion', $cli->direccion);
-            ?>
-        </td>
-    </tr>
-    <tr>
-        <td>Telefono</td>
-        <td>
-            <?php
-                echo form_input('telefono',$cli->telefono);
-            ?>
-        </td>
-    </tr>
-    </table>
-    <?php
-     echo form_hidden('id', $cli->id);
-    ?>
-    <input type="submit" name="Enviar" value="Enviar" class="btn btn-primary" />
-    <input type="reset" name="boton_reset" value="Resetear" class="btn btn-warning" >
-    <?php
-    echo form_close();
-    ?>
+      echo form_open("crudclientes/guardar");
+      ?>
+      <form class="form-control">
+        <label for="nombre"><br>Nombre</label>
+        <?php  echo form_input('nombre', $cli->nombre, "class='form-control' placeholder='Nombre'");  ?>
+        <label for="direccion"><br>Direccion</label>
+        <?php echo form_input('direccion', $cli->direccion, "class='form-control' placeholder='Nombre'");?>
+        <label for="telefono"><br>Telefono</label>
+        <?php echo form_input('telefono', $cli->direccion, "class='form-control' placeholder='Nombre'");?>
+        <label for="receta"> <br> Receta </label>
+        <?php  echo form_dropdown('id_receta', $recetas, "---", "class='form-dropdown'" );  ?>
+        <?php echo form_hidden('id', $cli->id); ?>
+        <br>
+        <br>
+        <input type="submit" name="Enviar" value="Enviar" class="btn btn-primary" />
+        <input type="reset" name="boton_reset" value="Resetear" class="btn btn-warning" >
+      </form>
+      <?php
+      echo form_close();
+      ?>
